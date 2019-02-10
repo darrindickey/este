@@ -1,5 +1,0 @@
-{
-  "watch": ["server"],
-  "exec": "node --require dotenv/config server/web.js",
-  "ext": "js"
-}

@@ -1,15 +1,11 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/este
     docker:
-      - image: circleci/node:8.9.4
+      - image: circleci/node:8.10
+    working_directory: ~/repo
     steps:
       - checkout
-
       - run: yarn
-
+      - run: yarn env dev
       - run: yarn test
-
-      # TODO: Doesn't work, investigate why.
-      # http://macklin.underdown.me/2017/07/27/deploy-to-now-from-circleci
